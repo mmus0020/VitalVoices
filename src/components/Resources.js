@@ -10,9 +10,86 @@ const FamilyResources = () => {
     setExpanded(newExpanded);
   };
 
+  const articles = [
+    {
+      title: "Understanding Male Mental Health",
+      excerpt: "Explore the unique challenges men face in addressing mental health issues...",
+      link: "https://mensline.org.au/mens-mental-health/mens-mental-health-common-challenges/#:~:text=Some%20men%20may%20be%20more,it%20in%20a%20healthy%20way."
+    },
+    {
+      title: "Breaking the Stigma: Men and Therapy",
+      excerpt: "Discover how therapy can be a powerful tool for men's mental well-being...",
+      link: "https://www.butler.org/blog/breaking-the-stigma-of-mens-mental-health"
+    },
+    {
+      title: "Mindfulness Techniques for Stress Reduction",
+      excerpt: "Learn practical mindfulness exercises tailored for men to manage stress...",
+      link: "https://www.mindful.org/how-to-manage-stress-with-mindfulness-and-meditation/"
+    }
+  ];
+
+  const resources = [
+    {
+      title: "Healthdirect",
+      subtitle: "Dads in Distress",
+      phone: "1300 853 437",
+      link: "https://www.healthdirect.gov.au/"
+    },
+    {
+      title: "Mensline",
+      phone: "1300 78 99 78",
+      link: "https://mensline.org.au/"
+    },
+    {
+      title: "Men's Shed",
+      phone: "1300 550 009",
+      link: "https://mensshed.org/"
+    }
+  ];
+
   return (
     <Container className="my-5">
-      <h2 className="text-center mb-5">Family Resources</h2>
+      {/* Latest Articles Section */}
+      <h2 className="text-center mb-5">Latest Articles</h2>
+      <Row>
+        {articles.map((article, index) => (
+          <Col md={4} key={index} className="mb-4">
+            <Card className="h-100 shadow-sm hover-card">
+              <Card.Body>
+                <Card.Title>{article.title}</Card.Title>
+                <Card.Text>{article.excerpt}</Card.Text>
+                <a href={article.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Read More</a>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Resources Section */}
+      <h2 className="text-center mb-5">Resources</h2>
+      <p className="text-center mb-4">If you are a man experiencing mental health issues, please see some resources below:</p>
+      <Row>
+        {resources.map((resource, index) => (
+          <Col md={4} key={index} className="mb-4">
+            <Card className="h-100 shadow-sm hover-card">
+              <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center">
+                <Card.Title className="mb-3">
+                  <a href={resource.link} target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none">
+                    {resource.title}
+                  </a>
+                </Card.Title>
+                {resource.subtitle && <Card.Subtitle className="mb-2 text-muted">{resource.subtitle}</Card.Subtitle>}
+                <Card.Text className="fs-4 fw-bold text-primary">
+                  <a href={`tel:${resource.phone}`} className="text-primary text-decoration-none">{resource.phone}</a>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Family Resources Section */}
+      <h2 className="text-center mb-5">Are You a Family? You can help too.</h2>
       <Row>
         <Col md={3}>
           <Card className="h-100">
