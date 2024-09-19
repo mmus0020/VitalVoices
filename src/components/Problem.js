@@ -4,24 +4,19 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import GamblingMotivationsCarousel from './infographics';
 import RollingNumber from './AnimateNumber';
-import './flip_card.css'
+import './flip_card.css';
 
 const Problem = () => {
-  const [isRollingVisible, setIsRollingVisible] = useState(false);
   const [chartOptions, setChartOptions] = useState({});
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [showGamblingExpenditure, setShowGamblingExpenditure] = useState(false);
 
-  // Fetch data on component mount or when `showGamblingExpenditure` changes
+  // Fetch data on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = showGamblingExpenditure
-          ? `https://backend-for-tp35-bch2bdcpfuh2fbbf.eastus-01.azurewebsites.net/api/graph/?include_expenditure=true`
-          : `https://backend-for-tp35-bch2bdcpfuh2fbbf.eastus-01.azurewebsites.net/api/graph/`;
-
+        const url = `https://backend-for-tp35-bch2bdcpfuh2fbbf.eastus-01.azurewebsites.net/api/graph/`;
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const result = await response.json();
@@ -29,7 +24,6 @@ const Problem = () => {
           year: parseInt(item.year),
           Males: parseInt(item.Males),
           Females: parseInt(item.Females),
-          ...(showGamblingExpenditure && { GamblingExpenditure: Math.round(parseFloat(item.total_expenditure)) }),
         }));
         processedData.sort((a, b) => a.year - b.year);
         setData(processedData);
@@ -42,14 +36,14 @@ const Problem = () => {
     };
 
     fetchData();
-  }, [showGamblingExpenditure]);
+  }, []);
 
   // Set chart options after fetching data
   useEffect(() => {
     if (data.length > 0) {
       setChartOptions({
         title: {
-          text: 'Suicide Rates and Gambling Expenditure',
+          text: 'Suicide Rates',
         },
         xAxis: {
           categories: data.map(item => item.year),
@@ -63,19 +57,10 @@ const Problem = () => {
             name: 'Females',
             data: data.map(item => item.Females),
           },
-          ...(showGamblingExpenditure
-            ? [
-                {
-                  name: 'Gambling Expenditure',
-                  data: data.map(item => item.GamblingExpenditure || 0),
-                  type: 'column', // Change type to column for gambling expenditure
-                },
-              ]
-            : []),
         ],
       });
     }
-  }, [data, showGamblingExpenditure]);
+  }, [data]);
 
   return (
     <div className="problem-page">
@@ -102,7 +87,7 @@ const Problem = () => {
         <section>
           <h2 className="text-center mb-5 section-header" style={{ fontSize: '2.5em', padding: '10px' }}>
             As per 2021, Gambling losses of{' '}
-            <RollingNumber value={1277} duration={2000} isVisible={isRollingVisible} /> per person annually can
+            <RollingNumber value={1277} duration={2000} /> per person annually can
             nearly halve the average Australian's annual savings of 4.8%.
           </h2>
           <Container id="charts-breakdown">

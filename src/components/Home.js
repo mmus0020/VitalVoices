@@ -12,21 +12,23 @@ const Home = () => {
         {/* Headline superimposed on the carousel */}
         <div className="carousel-caption-custom position-absolute text-center w-100">
           <h1 className="display-4 text-light">
-          Breaking the Silence on Gambling Addiction Among Young Men
+            Breaking the Silence on Gambling Addiction Among Young Men
           </h1>
-          <p className="lead text-light">Support, resources, and community for those affected by gambling addiction</p>
+          <p className="lead text-light">
+            Support, resources, and community for those affected by gambling addiction
+          </p>
         </div>
 
         {/* Carousel Section */}
         <Carousel className="styled-carousel" interval={2500} controls={false} indicators={false} fade>
           <Carousel.Item>
-            <img className="d-block w-100" src={supportImage} alt="Support group meeting" />
+            <img className="d-block w-100" src={supportImage} alt="Support group" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={Image1} alt="Additional Image 1" />
+            <img className="d-block w-100" src={Image1} alt="Discussion" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={Image2} alt="Additional Image 2" />
+            <img className="d-block w-100" src={Image2} alt="Counseling" />
           </Carousel.Item>
         </Carousel>
       </section>

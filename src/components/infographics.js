@@ -101,7 +101,6 @@
 
 // export default GamblingMotivationsCarousel;
 import React, { useState } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const motivations = [
   {
@@ -138,7 +137,7 @@ const motivations = [
   },
 ];
 
-const GamblingMotivationsFlipCards = () => {
+const GamblingMotivationsCarousel = () => {
   const [flippedIndex, setFlippedIndex] = useState(null);
 
   const handleCardClick = (index) => {
@@ -176,4 +175,4 @@ const GamblingMotivationsFlipCards = () => {
   );
 };
 
-export default GamblingMotivationsFlipCards;
+export default GamblingMotivationsCarousel;
