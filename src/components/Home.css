@@ -1,0 +1,53 @@
+/* General Page Styling for Home Page */
+.home-page-container {
+    background-color: #f8f9fa; /* Light grey background for consistency */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Section Styles */
+  .cta-section {
+    background-color: #f5f5f5; /* Match the background of other pages */
+    color: #2c2c2c;
+  }
+  
+  .page-container {
+    padding: 40px 20px; /* Consistent padding for uniformity */
+  }
+  
+  .carousel-caption-custom {
+    top: 40%; /* Adjusted for better visual alignment */
+  }
+  
+  .styled-carousel .carousel-item {
+    height: 600px; /* Set consistent height */
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #495057;
+  }
+  
+  /* Call to Action Button */
+  .cta-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+  }
+  

@@ -1,0 +1,139 @@
+/* General Page Styling */
+.resources-page-container {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Section Colors for Each Page */
+  .bg-light {
+    background-color: #f5f5f5; /* Light Grey for a soft look */
+  }
+  
+  .bg-info {
+    background-color: #d1ecf1; /* Light Blue for calming sections */
+  }
+  
+  .bg-support {
+    background-color: #e6f7ff; /* Light Pastel Blue */
+  }
+  
+  .bg-primary {
+    background-color: #007bff; /* Bright Blue for key sections */
+    color: #ffffff;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d; /* Dark Grey for contrast */
+    color: #ffffff;
+  }
+  
+  .bg-success {
+    background-color: #e6f7ff; /* Light Pastel Blue */
+  }
+  
+  .bg-pastel-green {
+    background-color: #eaf6e9; /* Light Green for calm feel */
+  }
+  
+  /* Container Style for Text */
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Card Styles */
+  .hover-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Updated Styling for Different Section Cards */
+  /* Updated Styling for Different Section Cards */
+ .articles-card {
+    background-color: #e0f7fa; /* Light Aqua for Articles */
+    border: 1px solid #b2ebf2;
+  }
+  
+  .support-card {
+    background-color: #e8f5e9; /* Light Green for Support Services */
+    border: 1px solid #c8e6c9;
+  }
+  
+  .family-card {
+    background-color: #fff3e0; /* Light Beige for Family Support */
+    border: 1px solid #ffe0b2;
+  }
+  
+  .self-exclusion-card {
+    background-color: #f5f5f5; /* Light Grey for Self-Exclusion */
+    border: 1px solid #e0e0e0;
+  }
+  
+  
+  /* Card Hover Effects */
+  .articles-card:hover,
+  .support-card:hover,
+  .family-card:hover,
+  .self-exclusion-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-description {
+      font-size: 1rem;
+    }
+  
+    .self-exclusion-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Additional Styling for Uniform Layout */
+  .section-wrapper {
+    padding: 50px 0;
+  }
+  
+  .section-dark {
+    background-color: #6c757d; /* Dark Grey for contrast */
+    color: #ffffff;
+  }
+  
+  .section-light {
+    background-color: #f5f5f5; /* Light Grey */
+  }
+  
+  .section-warning {
+    background-color: #fff8d7; /* Very Light Yellow */
+  }
+  
+  .section-primary {
+    background-color: #007bff; /* Bright Blue */
+    color: #ffffff;
+  }
+  
+  .section-success {
+    background-color: #e6f7ff; /* Soft Blue */
+  }
+  

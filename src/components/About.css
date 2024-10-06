@@ -1,0 +1,54 @@
+.about-page-container {
+    padding: 0;
+  }
+  
+  .about-hero-section {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-weight: bold;
+  }
+  
+  .about-intro-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+  
+  .about-content-section {
+    padding: 50px 0;
+  }
+  
+  .section-heading {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .about-story-section {
+    background-color: #fefae0;
+    padding: 60px 0;
+  }
+  
+  .about-story-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+  
+  .about-values-section {
+    background-color: #f9e79f;
+    padding: 50px 0;
+  }
+  
+  .value-heading {
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  
+  .text-justify {
+    text-align: justify;
+  }
+  

@@ -1,0 +1,36 @@
+/* General Page Container */
+.page-container {
+    max-width: 1200px; /* Set a consistent width for all pages */
+    margin: 0 auto;
+    padding: 30px 20px; /* Consistent padding for all pages */
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    color: #333333; /* Standard text color */
+  }
+  
+  /* Navbar Link Styling */
+  .nav-link-custom {
+    color: #333333;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-link-custom:hover,
+  .active-page {
+    color: #f76c6c;
+    border-bottom: 2px solid #f76c6c; /* Highlight active page */
+  }
+  
+  /* Common Background Color */
+  body {
+    background-color: #f8f4eb; /* Light beige background */
+  }
+  

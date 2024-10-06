@@ -1,0 +1,32 @@
+/* General Styles */
+.navbar {
+    background-color: #ffffff; /* White background */
+    padding: 15px 20px;
+  }
+  
+  .navbar-brand .logo {
+    width: 160px;
+    height: auto;
+  }
+  
+  .nav-item.nav-link {
+    color: #333333; /* Default dark grey text color */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-item.nav-link:hover {
+    color: #f76c6c; /* Coral color on hover */
+  }
+  
+  /* Active Page Styling */
+  .nav-item.nav-link.active-page {
+    color: #f76c6c !important; /* Coral color to show active page */
+    font-weight: bold;
+    border-bottom: 2px solid #f76c6c; /* Bottom border to highlight active state */
+  }
+  
+  /* Chat Button Styling */
+  .chat-btn {
+    font-size: 18px;
+  }
+  

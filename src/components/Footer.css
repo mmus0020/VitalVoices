@@ -1,0 +1,30 @@
+.footer {
+    background-color: #333333; /* Dark background to contrast with main content */
+    padding: 30px 0;
+  }
+  
+  .footer h5 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text */
+  }
+  
+  .footer p, .footer-link {
+    color: #cccccc; /* Light grey text for links and descriptions */
+    margin: 0 0 10px 0;
+  }
+  
+  .footer-link:hover {
+    color: #f76c6c; /* Coral color on hover */
+    text-decoration: none;
+  }
+  
+  .cta-button {
+    background-color: #f76c6c; /* Coral for call-to-action button */
+    border: none;
+  }
+  
+  .cta-button:hover {
+    background-color: #e65a5a; /* Slightly darker coral on hover */
+  }
+  
